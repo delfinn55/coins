@@ -1,3 +1,6 @@
+@extends('_public.layout.base')
+
+@section('content')
 <ul class="">
     @foreach ($errors->all() as $error)
         <li>{!! $error !!}</li>
@@ -11,8 +14,8 @@
             <form action="{{ route('login') }}" method="post">
                 @csrf
                 <div class="input-wrapper">
-                    <label for="username">Username</label>
-                    <input id="username"  type="text" name="username">
+                    <label for="name">Username</label>
+                    <input id="name"  type="text" name="name">
                 </div>
                 <div class="input-wrapper">
                     <label for="username">Password</label>
@@ -26,3 +29,4 @@
         </div>
     </div>
 </main>
+@endsection

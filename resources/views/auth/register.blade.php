@@ -1,3 +1,6 @@
+@extends('_public.layout.base')
+
+@section('content')
 <ul class="">
     @foreach ($errors->all() as $error)
         <li>{!! $error !!}</li>
@@ -34,3 +37,4 @@
         </div>
     </div>
 </main>
+@endsection
