@@ -1,12 +1,21 @@
 <div id="header">
-    @auth
-        <form action="{{ route('logout') }}" method="post">
-            @csrf
-            <button type="submit">Logout</button>
-        </form>
-    @else
-        <a href="{{ route('login') }}">login</a>
-        --------
-        <a href="{{ route('register') }}">register</a>
-    @endauth
+    <nav>
+        <ul>
+            @auth
+                <li>
+                    <form action="{{ route('logout') }}" method="post">
+                        @csrf
+                        <button type="submit">Logout</button>
+                    </form>
+                </li>
+            @else
+                <li>
+                    <a href="{{ route('login') }}">Login</a>
+                </li>
+                <li>
+                    <a href="{{ route('register') }}">Register</a>
+                </li>
+            @endauth
+        </ul>
+    </nav>
 </div>

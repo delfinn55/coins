@@ -1,32 +1,25 @@
 @extends('_public.layout.base')
 
 @section('content')
-<ul class="">
-    @foreach ($errors->all() as $error)
-        <li>{!! $error !!}</li>
-    @endforeach
-</ul>
-
 <main class="login-form">
-    <div class="cotainer">
-        <h3 class="card-header text-center">Login form</h3>
-        <div class="card-body">
-            <form action="{{ route('login') }}" method="post">
-                @csrf
-                <div class="input-wrapper">
-                    <label for="email">Email</label>
-                    <input id="email"  type="email" name="email">
-                </div>
-                <div class="input-wrapper">
-                    <label for="username">Password</label>
-                    <input id="password"  type="password" name="password">
-                </div>
-                <button type="submit">Login</button>
-            </form>
-            <div class="auth-actions">
-                <a href="{{ route('register') }}">Registration</a>
+    <div class="form-wrapper ml-auto mr-auto">
+        <h3>Login form</h3>
+        <form class="form" action="{{ route('login') }}" method="post">
+            @csrf
+            <div class="input-wrapper">
+                <label class="input-label" for="email">Email</label>
+                <input id="email"  type="email" name="email">
             </div>
-        </div>
+            <div class="input-wrapper">
+                <label class="input-label" for="username">Password</label>
+                <input id="password"  type="password" name="password">
+            </div>
+            <div class="btn-wrapper">
+                <button class="btn btn-submit" type="submit">Login</button>
+            </div>
+        </form>
+
+        @include('_public.components.validation-errors')
     </div>
 </main>
 @endsection

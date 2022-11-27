@@ -1,0 +1,10 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

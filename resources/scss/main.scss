@@ -1,1 +1,22 @@
-@import 'parts/common.scss';
+// Common
+@import 'common/reset';
+@import 'common/style';
+
+// Layout
+@import 'layout/margins';
+
+// Elements
+@import 'elements/header';
+@import 'elements/footer';
+
+// Components
+@import 'components/inputs';
+@import 'components/buttons';
+
+// Forms
+@import 'forms/form';
+@import 'forms/login-register';
+@import 'forms/validation';
+
+// Parts
+

@@ -3,8 +3,8 @@
     <head>
         @vite(['resources/scss/main.scss', 'resources/js/app.js'])
     </head>
-    <body class="">
-        <div class="page-wrap">
+    <body>
+        <div class="page-wrapper">
             @include('_public.parts.header')
 
             @section('content')
