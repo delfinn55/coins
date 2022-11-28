@@ -1,7 +1,7 @@
 @extends('_public.layout.base')
 
 @section('content')
-<main class="login-form">
+<main class="page page-content login-form">
     <div class="form-wrapper ml-auto mr-auto">
         <h3>Login form</h3>
         <form class="form" action="{{ route('login') }}" method="post">
